@@ -50,14 +50,7 @@ class billetera_electronica:
             return True
         else:
             print("El saldo no es suficiente para realizar este consumo")
-            return False      
-def main():
-    l=LinkedList()
-    n=Node(1,12,300)
-    l.add(n)
-    print(l.head.id)
-
-if __name__=="__main__":
-    main()
-        
+            return False  
+   
+       
     
