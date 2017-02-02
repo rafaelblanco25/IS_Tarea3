@@ -21,6 +21,10 @@ class billetera_electronicaTester(unittest.TestCase):
     def testCaso_Malicia (self):
         b=billetera_electronica(2,"Rafael", "Blanco", 24981563)
         self.assertEqual(False,b.recargar(-2000,time.strftime("%d/%m/%y"),2))  
+    def testCaso_Malicia2 (self):
+        b=billetera_electronica(2,"Rafael", "Blanco", 24981563)
+        self.assertEqual(False,b.consumir(-2000,time.strftime("%d/%m/%y"),"La balconata",2))  
+        print ("EPA")
     def testCaso_Interior (self):
         b=billetera_electronica(2,"Rafael", "Blanco", 24981563)
         b.recargar(5000,time.strftime("%d/%m/%y"),2)

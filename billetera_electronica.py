@@ -45,6 +45,9 @@ class billetera_electronica:
         return True 
         
     def consumir(self, monto, fecha, idi,pin):
+        if monto<=0:
+            print ("El consumo debe ser un monto mayor a 0")
+            return False
         if self.pin!= pin:
             print("El pin de usuario introducido es invalido")
             return False
